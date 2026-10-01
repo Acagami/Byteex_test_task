@@ -1,0 +1,12 @@
+﻿{
+  "collectionName": "components_sections_stories",
+  "info": { "displayName": "Brand story section", "icon": "book" },
+  "options": {},
+  "attributes": {
+    "title": { "type": "string", "required": true },
+    "body": { "type": "richtext" },
+    "image": { "type": "media", "multiple": false, "allowedTypes": ["images"] },
+    "buttonLabel": { "type": "string" },
+    "buttonUrl": { "type": "string" }
+  }
+}

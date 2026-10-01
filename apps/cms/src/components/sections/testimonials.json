@@ -1,0 +1,11 @@
+﻿{
+  "collectionName": "components_sections_testimonials",
+  "info": { "displayName": "Testimonials section", "icon": "quote" },
+  "options": {},
+  "attributes": {
+    "title": { "type": "string", "required": true },
+    "description": { "type": "text" },
+    "reviews": { "type": "component", "repeatable": true, "component": "shared.review" },
+    "gallery": { "type": "media", "multiple": true, "allowedTypes": ["images"] }
+  }
+}

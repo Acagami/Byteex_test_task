@@ -1,0 +1,10 @@
+﻿{
+  "collectionName": "components_sections_faqs",
+  "info": { "displayName": "FAQ section", "icon": "question" },
+  "options": {},
+  "attributes": {
+    "title": { "type": "string", "required": true },
+    "items": { "type": "component", "repeatable": true, "component": "shared.faq-item" },
+    "image": { "type": "media", "multiple": true, "allowedTypes": ["images"] }
+  }
+}

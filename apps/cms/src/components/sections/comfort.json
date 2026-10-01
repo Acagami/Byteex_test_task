@@ -1,0 +1,11 @@
+﻿{
+  "collectionName": "components_sections_comfort",
+  "info": { "displayName": "Comfort made easy section", "icon": "grid" },
+  "options": {},
+  "attributes": {
+    "title": { "type": "string", "required": true },
+    "cards": { "type": "component", "repeatable": true, "component": "shared.comfort-card" },
+    "buttonLabel": { "type": "string" },
+    "buttonUrl": { "type": "string" }
+  }
+}

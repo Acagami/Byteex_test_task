@@ -1,0 +1,12 @@
+﻿{
+  "collectionName": "components_sections_closing_ctas",
+  "info": { "displayName": "Closing call to action", "icon": "cursor" },
+  "options": {},
+  "attributes": {
+    "title": { "type": "string", "required": true },
+    "description": { "type": "text" },
+    "gallery": { "type": "media", "multiple": true, "allowedTypes": ["images"] },
+    "buttonLabel": { "type": "string" },
+    "buttonUrl": { "type": "string" }
+  }
+}

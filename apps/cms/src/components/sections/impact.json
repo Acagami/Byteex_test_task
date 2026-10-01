@@ -1,0 +1,9 @@
+﻿{
+  "collectionName": "components_sections_impacts",
+  "info": { "displayName": "Impact section", "icon": "chartBubble" },
+  "options": {},
+  "attributes": {
+    "title": { "type": "string", "required": true },
+    "metrics": { "type": "component", "repeatable": true, "component": "shared.metric" }
+  }
+}

@@ -1,0 +1,10 @@
+﻿{
+  "collectionName": "components_shared_comfort_cards",
+  "info": { "displayName": "Comfort card", "icon": "grid" },
+  "options": {},
+  "attributes": {
+    "icon": { "type": "string" },
+    "title": { "type": "string", "required": true },
+    "description": { "type": "text" }
+  }
+}
