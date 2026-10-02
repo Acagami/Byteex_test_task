@@ -1,6 +1,8 @@
 ﻿import { useState } from 'react'
 import whiteLoungewear from './assets/loungewear-white.png'
 import sageLoungewear from './assets/loungewear-sage.png'
+import oatLoungewear from './assets/loungewear-oat.png'
+import readingLoungewear from './assets/loungewear-reading.png'
 import './App.css'
 
 type IconName = 'comfort' | 'package' | 'waves' | 'leaf' | 'drop' | 'flower'
@@ -24,6 +26,13 @@ const reviews = [
   { name: 'Nina R.', quote: 'Beautifully made and so soft. It has quickly become the first thing I reach for when I get home.', source: 'Verified customer' },
 ]
 
+const galleryPhotos = [
+  { src: whiteLoungewear, title: 'White Robe', alt: 'White cotton loungewear set' },
+  { src: oatLoungewear, title: 'Oat Set', alt: 'Oatmeal lounge top and shorts' },
+  { src: sageLoungewear, title: 'Sage Set', alt: 'Sage cotton loungewear set' },
+  { src: readingLoungewear, title: 'Relaxed Set', alt: 'Model reading in white loungewear' },
+]
+
 function LineIcon({ name }: { name: IconName }) {
   const paths: Record<IconName, string> = {
     comfort: 'M12 3v3m0 12v3M3 12h3m12 0h3M5.64 5.64l2.12 2.12m8.48 8.48 2.12 2.12m0-12.72-2.12 2.12m-8.48 8.48-2.12 2.12M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z',
@@ -37,11 +46,10 @@ function LineIcon({ name }: { name: IconName }) {
 }
 
 function App() {
-  const [activeReview, setActiveReview] = useState(0)
-  const review = reviews[activeReview]
-
-  const changeReview = (direction: -1 | 1) => {
-    setActiveReview((current) => (current + direction + reviews.length) % reviews.length)
+  const [selectedPhoto, setSelectedPhoto] = useState(0)
+  const activePhoto = galleryPhotos[selectedPhoto]
+  const showPhoto = (direction: -1 | 1) => {
+    setSelectedPhoto((current) => (current + direction + galleryPhotos.length) % galleryPhotos.length)
   }
 
   return (
@@ -62,22 +70,17 @@ function App() {
               {promises.map((promise) => <li key={promise.text}><span className="promise-icon"><LineIcon name={promise.icon} /></span>{promise.text}</li>)}
             </ul>
             <a className="button" href="#story"><span>Customize Your Outfit</span><span className="button-arrow" aria-hidden="true">&rarr;</span></a>
-            <article className="review-note" aria-label="Customer review carousel">
-              <div className="review-content" aria-live="polite">
-                <div className="review-meta"><strong>{review.name}</strong><span className="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span>{review.source}</span></div>
-                <p>&ldquo;{review.quote}&rdquo;</p>
-              </div>
-              <div className="review-controls">
-                <span className="review-count">{activeReview + 1} / {reviews.length}</span>
-                <button type="button" aria-label="Previous review" onClick={() => changeReview(-1)}>&larr;</button>
-                <button type="button" aria-label="Next review" onClick={() => changeReview(1)}>&rarr;</button>
+            <article className="review-note" aria-label="Customer review">
+              <div className="review-content">
+                <div className="review-meta"><strong>{reviews[0].name}</strong><span className="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span>{reviews[0].source}</span></div>
+                <p>&ldquo;{reviews[0].quote}&rdquo;</p>
               </div>
             </article>
           </div>
           <div className="hero-collage" aria-label="Loungewear collection photos">
-            <img className="hero-photo hero-photo-one" src={sageLoungewear} alt="Sage loungewear set" />
+            <img className="hero-photo hero-photo-one" src={oatLoungewear} alt="Oatmeal loungewear set" />
             <img className="hero-photo hero-photo-two" src={whiteLoungewear} alt="White cotton loungewear set" />
-            <img className="hero-photo hero-photo-three" src={sageLoungewear} alt="Soft sage loungewear" />
+            <img className="hero-photo hero-photo-three" src={readingLoungewear} alt="Relaxed white loungewear" />
           </div>
         </section>
         <section className="press-strip" aria-label="As seen in">
@@ -94,15 +97,26 @@ function App() {
               </article>
             ))}
           </div>
-          <figure className="feature-photo">
-            <img src={whiteLoungewear} alt="Model relaxing in a soft white loungewear set" />
-            <figcaption>White Robe</figcaption>
-          </figure>
+          <div className="feature-gallery" aria-label="Loungewear photo gallery">
+            <button className="gallery-arrow gallery-arrow-previous" type="button" aria-label="Previous photo" onClick={() => showPhoto(-1)}>&lsaquo;</button>
+            <figure className="feature-photo">
+              <img src={activePhoto.src} alt={activePhoto.alt} />
+              <div className="gallery-thumbnails" aria-label="Choose a loungewear photo">
+                {galleryPhotos.map((photo, index) => (
+                  <button className={index === selectedPhoto ? 'gallery-thumbnail is-selected' : 'gallery-thumbnail'} type="button" key={photo.title} aria-label={`Show ${photo.title}`} aria-pressed={index === selectedPhoto} onClick={() => setSelectedPhoto(index)}>
+                    <img src={photo.src} alt="" />
+                  </button>
+                ))}
+              </div>
+              <figcaption>{activePhoto.title}</figcaption>
+            </figure>
+            <button className="gallery-arrow gallery-arrow-next" type="button" aria-label="Next photo" onClick={() => showPhoto(1)}>&rsaquo;</button>
+          </div>
         </section>
         <section className="story" id="story" aria-labelledby="story-title">
           <div className="story-collage" aria-label="Loungewear collection photography">
             <img className="story-photo story-photo-main" src={whiteLoungewear} alt="Model wearing a white loungewear set" />
-            <img className="story-photo story-photo-top" src={sageLoungewear} alt="Sage loungewear collection" />
+            <img className="story-photo story-photo-top" src={oatLoungewear} alt="Oatmeal loungewear collection" />
             <img className="story-photo story-photo-bottom" src={sageLoungewear} alt="Soft cotton loungewear in a sunlit room" />
           </div>
           <div className="story-copy">
