@@ -92,3 +92,38 @@
 @media (max-width: 700px) {
   .hero-collage { transform: none; }
 }
+
+/* Borderless foreground/background triptych. */
+.hero-collage {
+  isolation: isolate;
+  overflow: visible;
+  background: linear-gradient(135deg, #fbf8f4 0%, #f4e8dc 52%, #fcf9f6 100%);
+}
+.hero-collage::before { content: none; }
+.hero-photo {
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  object-fit: cover;
+}
+.hero-photo-one, .hero-photo-three {
+  top: 8%;
+  z-index: 1;
+  width: 25%;
+  height: 74%;
+}
+.hero-photo-one { left: 8%; }
+.hero-photo-two {
+  left: 31%;
+  top: 17%;
+  z-index: 2;
+  width: 38%;
+  height: 83%;
+}
+.hero-photo-three { right: 8%; }
+@media (max-width: 700px) {
+  .hero-photo-one, .hero-photo-three { top: 10%; width: 25%; height: 72%; }
+  .hero-photo-one { left: 4%; }
+  .hero-photo-two { left: 31%; top: 17%; width: 38%; height: 82%; }
+  .hero-photo-three { right: 4%; }
+}
