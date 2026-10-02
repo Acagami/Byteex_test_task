@@ -227,3 +227,17 @@
     content: '';
   }
 }
+
+/* Restore the tall story collage proportions and blend overlap seams into its background. */
+@media (min-width: 1025px) {
+  .story-collage { min-height: 600px; }
+  .story-photo { border: 0; outline: none; box-shadow: none; }
+  .story-photo-main { left: 14%; top: 7%; width: 70%; height: 94%; }
+  .story-photo-top { left: 0; top: 0; width: 30%; height: 28%; }
+  .story-photo-bottom { right: 7%; bottom: -8%; width: 22%; height: 28%; }
+  .story-seam { background: #f3eff3; }
+  .story-seam-top-right { left: 30%; top: 7%; width: 3px; height: 21%; }
+  .story-seam-top-bottom { left: 14%; top: 28%; width: 16%; height: 3px; }
+  .story-seam-bottom-left { left: 84%; top: 80%; width: 3px; height: 28%; }
+  .story-seam-bottom-top { left: 71%; top: 80%; width: 13%; height: 3px; }
+}
