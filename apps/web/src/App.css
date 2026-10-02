@@ -127,3 +127,18 @@
   .hero-photo-two { left: 31%; top: 17%; width: 38%; height: 82%; }
   .hero-photo-three { right: 4%; }
 }
+
+/* Match the reference triptych's wide, shallow composition. */
+@media (min-width: 701px) {
+  .hero { width: min(calc(100% - 64px), 1320px); grid-template-columns: minmax(390px, .78fr) minmax(0, 1.22fr); gap: clamp(40px, 4vw, 64px); }
+  .hero-collage { width: min(100%, 814px); height: 525px; min-height: 0; justify-self: center; transform: none; background: transparent; }
+  .hero-collage::before { position: absolute; inset: 22% -5% 27%; z-index: -1; content: ''; background: linear-gradient(90deg, #fff 0%, #f7eee5 16%, #f4e8dc 50%, #f7eee5 84%, #fff 100%); }
+  .hero-photo-one, .hero-photo-three { top: 12.4%; width: 25.7%; height: 75.2%; }
+  .hero-photo-one { left: 4.8%; }
+  .hero-photo-two { left: 30%; top: 0; width: 40.2%; height: 100%; }
+  .hero-photo-three { right: 4.3%; }
+}
+@media (max-width: 700px) {
+  .hero-collage { width: 100%; height: min(76vw, 330px); min-height: 0; }
+  .hero-collage::before { inset: 24% -4% 25%; content: ''; background: linear-gradient(90deg, #fff 0%, #f6ece2 18%, #f6ece2 82%, #fff 100%); }
+}
