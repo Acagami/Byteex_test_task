@@ -201,3 +201,9 @@
   .hero-photo-three { right: 12.3%; }
   .benefits { width: min(calc(100% - 96px), 1280px); }
 }
+
+/* Increase the desktop left gutter and trim the collage gradient spill. */
+@media (min-width: 1025px) {
+  .site-header, .hero { width: min(calc(100% - 128px), 1680px); }
+  .hero-collage::before { inset: 22% -5% 27% 0; }
+}
