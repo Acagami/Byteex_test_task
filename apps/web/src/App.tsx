@@ -118,6 +118,10 @@ function App() {
             <img className="story-photo story-photo-main" src={whiteLoungewear} alt="Model wearing a white loungewear set" />
             <img className="story-photo story-photo-top" src={oatLoungewear} alt="Oatmeal loungewear collection" />
             <img className="story-photo story-photo-bottom" src={sageLoungewear} alt="Soft cotton loungewear in a sunlit room" />
+            <span className="story-seam story-seam-top-right" aria-hidden="true" />
+            <span className="story-seam story-seam-top-bottom" aria-hidden="true" />
+            <span className="story-seam story-seam-bottom-left" aria-hidden="true" />
+            <span className="story-seam story-seam-bottom-top" aria-hidden="true" />
           </div>
           <div className="story-copy">
             <h2 id="story-title">Be your best self.</h2>

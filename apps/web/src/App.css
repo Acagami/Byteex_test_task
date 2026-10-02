@@ -127,3 +127,77 @@
   .hero-photo-two { left: 31%; top: 17%; width: 38%; height: 82%; }
   .hero-photo-three { right: 4%; }
 }
+
+/* Match the reference triptych's wide, shallow composition. */
+@media (min-width: 701px) {
+  .hero { width: min(calc(100% - 64px), 1320px); grid-template-columns: minmax(390px, .78fr) minmax(0, 1.22fr); gap: clamp(40px, 4vw, 64px); }
+  .hero-collage { width: min(100%, 814px); height: 525px; min-height: 0; justify-self: center; transform: none; background: transparent; }
+  .hero-collage::before { position: absolute; inset: 22% -5% 27%; z-index: -1; content: ''; background: linear-gradient(90deg, #fff 0%, #f7eee5 16%, #f4e8dc 50%, #f7eee5 84%, #fff 100%); }
+  .hero-photo-one, .hero-photo-three { top: 12.4%; width: 25.7%; height: 75.2%; }
+  .hero-photo-one { left: 4.8%; }
+  .hero-photo-two { left: 30%; top: 0; width: 40.2%; height: 100%; }
+  .hero-photo-three { right: 4.3%; }
+}
+@media (max-width: 700px) {
+  .hero-collage { width: 100%; height: min(76vw, 330px); min-height: 0; }
+  .hero-collage::before { inset: 24% -4% 25%; content: ''; background: linear-gradient(90deg, #fff 0%, #f6ece2 18%, #f6ece2 82%, #fff 100%); }
+}
+
+/* Thin white seam around the hero triptych panels. */
+.hero-photo { border: 2px solid #fff; }
+
+.gallery-thumbnail { flex: 0 0 clamp(32px, 5vw, 44px); width: clamp(32px, 5vw, 44px); height: auto; aspect-ratio: 1; }
+.gallery-thumbnail img { aspect-ratio: 1; }
+@media (max-width: 700px) {
+  .gallery-thumbnail { flex-basis: clamp(28px, 8vw, 38px); width: clamp(28px, 8vw, 38px); height: auto; aspect-ratio: 1; }
+}
+
+/* Make each overlapping story-collage photo edge clearly visible. */
+.story-photo { border: 6px solid #fff; }
+
+/* Draw a crisp white separator at each overlapping photo edge. */
+.story-photo { border: 0; outline: 3px solid #fff; outline-offset: -3px; }
+
+/* White separators only on the actual overlap seams in the story collage. */
+.story-photo { border: 0; outline: none; outline-offset: 0; }
+.story-seam { position: absolute; z-index: 4; display: block; background: #fff; pointer-events: none; }
+.story-seam-top-right { left: 29%; top: 3%; width: 3px; height: 27%; }
+.story-seam-top-bottom { left: 16%; top: 30%; width: 13%; height: 3px; }
+.story-seam-bottom-left { left: 72%; top: 70%; width: 3px; height: 27%; }
+.story-seam-bottom-top { left: 72%; top: 70%; width: 6%; height: 3px; }
+@media (max-width: 700px) {
+  .story-seam-top-bottom { left: 17%; width: 12%; }
+  .story-seam-bottom-top { width: 8%; }
+}
+
+.story-seam { background: #f3eff3; }
+
+/* Desktop proportions tuned against the Figma first fold. */
+@media (min-width: 1025px) {
+  #root { width: 100%; max-width: none; }
+  .announcement { width: 100%; min-height: 34px; padding-top: 8px; padding-bottom: 8px; }
+  .site-header { width: min(calc(100% - 64px), 1680px); height: 104px; }
+  .wordmark { font-size: 44px; line-height: 1; }
+  .wordmark sup { font-size: 11px; }
+  .hero {
+    width: min(calc(100% - 64px), 1680px);
+    grid-template-columns: minmax(520px, .78fr) minmax(0, 1.22fr);
+    gap: clamp(40px, 4vw, 64px);
+    align-items: start;
+    padding-top: 30px;
+  }
+  .hero-copy { max-width: 600px; }
+  .hero h1 { max-width: 560px; font-size: clamp(36px, 2.7vw, 42px); line-height: 1.08; }
+  .promise-list li { grid-template-columns: 30px 1fr; gap: 14px; font-size: 14px; line-height: 1.5; }
+  .promise-icon { width: 30px; height: 30px; }
+  .promise-icon svg { width: 17px; height: 17px; }
+  .hero .button, .hero .cta-button { width: min(100%, 360px); min-height: 56px; font-size: 16px; }
+  .review-note, .hero-review { width: min(100%, 520px); }
+  .hero-collage { height: 420px; }
+  .hero-collage::before { inset: 22% -10% 27%; }
+  .hero-photo-one, .hero-photo-three { width: 21.5%; }
+  .hero-photo-one { left: 12.5%; }
+  .hero-photo-two { left: 33.5%; width: 34%; }
+  .hero-photo-three { right: 12.3%; }
+  .benefits { width: min(calc(100% - 96px), 1280px); }
+}
