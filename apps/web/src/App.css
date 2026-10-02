@@ -201,3 +201,29 @@
   .hero-photo-three { right: 12.3%; }
   .benefits { width: min(calc(100% - 96px), 1280px); }
 }
+
+/* Increase the desktop left gutter and trim the collage gradient spill. */
+@media (min-width: 1025px) {
+  .site-header, .hero { width: min(calc(100% - 128px), 1680px); }
+  .hero-collage::before { inset: 22% -5% 27% 0; }
+}
+
+/* Full-bleed story background with the existing centered content width. */
+@media (min-width: 1025px) {
+  .story {
+    position: relative;
+    isolation: isolate;
+    width: 100%;
+    max-width: none;
+    padding-right: max(5.5%, calc((100% - 1400px) / 2 + 77px));
+    padding-left: max(5.5%, calc((100% - 1400px) / 2 + 77px));
+    background: transparent;
+  }
+  .story::before {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: #f3eff3;
+    content: '';
+  }
+}
