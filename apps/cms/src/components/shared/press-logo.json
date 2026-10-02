@@ -1,0 +1,9 @@
+﻿{
+  "collectionName": "components_shared_press_logos",
+  "info": { "displayName": "Press logo", "icon": "picture" },
+  "options": {},
+  "attributes": {
+    "name": { "type": "string", "required": true },
+    "logo": { "type": "media", "multiple": false, "allowedTypes": ["images"] }
+  }
+}
