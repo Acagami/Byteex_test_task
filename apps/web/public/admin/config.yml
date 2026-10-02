@@ -1,0 +1,510 @@
+backend:
+  name: git-gateway
+  branch: dev
+local_backend:
+  url: http://127.0.0.1:8081/api/v1
+media_folder: apps/web/public/media
+public_folder: /media
+site_url: http://localhost:5173
+display_url: http://localhost:5173
+logo_url: /favicon.svg
+collections:
+  - name: pages
+    label: Pages
+    files:
+      - name: homepage
+        label: Homepage
+        file: apps/web/public/content/homepage.json
+        format: json
+        editor:
+          preview: false
+        fields:
+          - label: Brand Name
+            name: brandName
+            widget: string
+          - label: Announcement
+            name: announcement
+            widget: list
+            min: 1
+            max: 3
+            collapsed: true
+            field:
+              label: Text
+              name: text
+              widget: string
+          - label: Rating Label
+            name: ratingLabel
+            widget: string
+          - label: Hero
+            name: hero
+            widget: object
+            collapsed: true
+            fields:
+              - label: Title
+                name: title
+                widget: string
+              - label: Promises
+                name: promises
+                widget: list
+                min: 1
+                collapsed: true
+                fields:
+                  - label: Icon
+                    name: icon
+                    widget: select
+                    options:
+                      - comfort
+                      - package
+                      - waves
+                      - leaf
+                      - drop
+                      - flower
+                      - bag
+                      - truck
+                      - sun
+                      - cloud
+                      - bolt
+                  - label: Text
+                    name: text
+                    widget: text
+              - label: Cta
+                name: cta
+                widget: object
+                collapsed: true
+                fields:
+                  - label: Label
+                    name: label
+                    widget: string
+                  - label: Button destination
+                    name: href
+                    widget: string
+                    pattern:
+                      - ^(#[\w-]+|/(?!/)[^\s]*|https?://[^\s]+)$
+                      - Use an anchor (#benefits), site path, or HTTP(S) URL.
+              - label: Review
+                name: review
+                widget: object
+                collapsed: true
+                fields:
+                  - label: Name
+                    name: name
+                    widget: string
+                  - label: Quote
+                    name: quote
+                    widget: text
+                  - label: Rating
+                    name: rating
+                    widget: number
+                    value_type: int
+                    min: 1
+                    max: 5
+                  - label: Avatar
+                    name: avatar
+                    widget: object
+                    collapsed: true
+                    fields:
+                      - label: Image
+                        name: src
+                        widget: image
+                      - label: Image description (leave blank for decorative images)
+                        name: alt
+                        widget: string
+                        required: false
+                        default: ""
+                  - label: Source
+                    name: source
+                    widget: string
+              - label: Gallery
+                name: gallery
+                widget: list
+                min: 3
+                max: 3
+                collapsed: true
+                fields:
+                  - label: Image
+                    name: src
+                    widget: image
+                  - label: Image description (leave blank for decorative images)
+                    name: alt
+                    widget: string
+                    required: false
+                    default: ""
+          - label: Press
+            name: press
+            widget: object
+            collapsed: true
+            fields:
+              - label: Title
+                name: title
+                widget: string
+              - label: Logos
+                name: logos
+                widget: list
+                min: 1
+                collapsed: true
+                fields:
+                  - label: Image
+                    name: src
+                    widget: image
+                  - label: Image description (leave blank for decorative images)
+                    name: alt
+                    widget: string
+                    required: false
+                    default: ""
+          - label: Benefits
+            name: benefits
+            widget: object
+            collapsed: true
+            fields:
+              - label: Title
+                name: title
+                widget: string
+              - label: Items
+                name: items
+                widget: list
+                min: 1
+                collapsed: true
+                fields:
+                  - label: Icon
+                    name: icon
+                    widget: select
+                    options:
+                      - comfort
+                      - package
+                      - waves
+                      - leaf
+                      - drop
+                      - flower
+                      - bag
+                      - truck
+                      - sun
+                      - cloud
+                      - bolt
+                  - label: Title
+                    name: title
+                    widget: string
+                  - label: Description
+                    name: description
+                    widget: text
+              - label: Gallery
+                name: gallery
+                widget: list
+                min: 1
+                collapsed: true
+                fields:
+                  - label: Image
+                    name: src
+                    widget: image
+                  - label: Image description (leave blank for decorative images)
+                    name: alt
+                    widget: string
+                    required: false
+                    default: ""
+                  - label: Title
+                    name: title
+                    widget: string
+          - label: Story
+            name: story
+            widget: object
+            collapsed: true
+            fields:
+              - label: Title
+                name: title
+                widget: string
+              - label: Paragraphs
+                name: paragraphs
+                widget: list
+                min: 1
+                collapsed: true
+                field:
+                  label: Text
+                  name: text
+                  widget: string
+              - label: Gallery
+                name: gallery
+                widget: list
+                min: 3
+                max: 3
+                collapsed: true
+                fields:
+                  - label: Image
+                    name: src
+                    widget: image
+                  - label: Image description (leave blank for decorative images)
+                    name: alt
+                    widget: string
+                    required: false
+                    default: ""
+              - label: Cta
+                name: cta
+                widget: object
+                collapsed: true
+                fields:
+                  - label: Label
+                    name: label
+                    widget: string
+                  - label: Button destination
+                    name: href
+                    widget: string
+                    pattern:
+                      - ^(#[\w-]+|/(?!/)[^\s]*|https?://[^\s]+)$
+                      - Use an anchor (#benefits), site path, or HTTP(S) URL.
+          - label: Comfort
+            name: comfort
+            widget: object
+            collapsed: true
+            fields:
+              - label: Title
+                name: title
+                widget: string
+              - label: Cards
+                name: cards
+                widget: list
+                min: 3
+                max: 3
+                collapsed: true
+                fields:
+                  - label: Icon
+                    name: icon
+                    widget: select
+                    options:
+                      - comfort
+                      - package
+                      - waves
+                      - leaf
+                      - drop
+                      - flower
+                      - bag
+                      - truck
+                      - sun
+                      - cloud
+                      - bolt
+                  - label: Title
+                    name: title
+                    widget: string
+                  - label: Description
+                    name: description
+                    widget: text
+              - label: Cta
+                name: cta
+                widget: object
+                collapsed: true
+                fields:
+                  - label: Label
+                    name: label
+                    widget: string
+                  - label: Button destination
+                    name: href
+                    widget: string
+                    pattern:
+                      - ^(#[\w-]+|/(?!/)[^\s]*|https?://[^\s]+)$
+                      - Use an anchor (#benefits), site path, or HTTP(S) URL.
+          - label: Testimonials
+            name: testimonials
+            widget: object
+            collapsed: true
+            fields:
+              - label: Title
+                name: title
+                widget: string
+              - label: Description
+                name: description
+                widget: text
+              - label: Gallery
+                name: gallery
+                widget: list
+                min: 1
+                collapsed: true
+                fields:
+                  - label: Image
+                    name: src
+                    widget: image
+                  - label: Image description (leave blank for decorative images)
+                    name: alt
+                    widget: string
+                    required: false
+                    default: ""
+              - label: Reviews
+                name: reviews
+                widget: list
+                min: 1
+                collapsed: true
+                fields:
+                  - label: Name
+                    name: name
+                    widget: string
+                  - label: Quote
+                    name: quote
+                    widget: text
+                  - label: Rating
+                    name: rating
+                    widget: number
+                    value_type: int
+                    min: 1
+                    max: 5
+              - label: Cta
+                name: cta
+                widget: object
+                collapsed: true
+                fields:
+                  - label: Label
+                    name: label
+                    widget: string
+                  - label: Button destination
+                    name: href
+                    widget: string
+                    pattern:
+                      - ^(#[\w-]+|/(?!/)[^\s]*|https?://[^\s]+)$
+                      - Use an anchor (#benefits), site path, or HTTP(S) URL.
+          - label: Faq
+            name: faq
+            widget: object
+            collapsed: true
+            fields:
+              - label: Title
+                name: title
+                widget: string
+              - label: Items
+                name: items
+                widget: list
+                min: 1
+                collapsed: true
+                fields:
+                  - label: Question
+                    name: question
+                    widget: string
+                  - label: Answer
+                    name: answer
+                    widget: text
+              - label: Gallery
+                name: gallery
+                widget: list
+                min: 3
+                max: 3
+                collapsed: true
+                fields:
+                  - label: Image
+                    name: src
+                    widget: image
+                  - label: Image description (leave blank for decorative images)
+                    name: alt
+                    widget: string
+                    required: false
+                    default: ""
+          - label: Impact
+            name: impact
+            widget: object
+            collapsed: true
+            fields:
+              - label: Title
+                name: title
+                widget: string
+              - label: Metrics
+                name: metrics
+                widget: list
+                min: 3
+                max: 3
+                collapsed: true
+                fields:
+                  - label: Icon
+                    name: icon
+                    widget: select
+                    options:
+                      - comfort
+                      - package
+                      - waves
+                      - leaf
+                      - drop
+                      - flower
+                      - bag
+                      - truck
+                      - sun
+                      - cloud
+                      - bolt
+                  - label: Value
+                    name: value
+                    widget: string
+                  - label: Label
+                    name: label
+                    widget: string
+          - label: Closing
+            name: closing
+            widget: object
+            collapsed: true
+            fields:
+              - label: Title
+                name: title
+                widget: string
+              - label: Description
+                name: description
+                widget: text
+              - label: Gallery
+                name: gallery
+                widget: list
+                min: 3
+                max: 3
+                collapsed: true
+                fields:
+                  - label: Image
+                    name: src
+                    widget: image
+                  - label: Image description (leave blank for decorative images)
+                    name: alt
+                    widget: string
+                    required: false
+                    default: ""
+              - label: Cta
+                name: cta
+                widget: object
+                collapsed: true
+                fields:
+                  - label: Label
+                    name: label
+                    widget: string
+                  - label: Button destination
+                    name: href
+                    widget: string
+                    pattern:
+                      - ^(#[\w-]+|/(?!/)[^\s]*|https?://[^\s]+)$
+                      - Use an anchor (#benefits), site path, or HTTP(S) URL.
+              - label: Shipping Note
+                name: shippingNote
+                widget: string
+              - label: Payment Methods
+                name: paymentMethods
+                widget: object
+                collapsed: true
+                fields:
+                  - label: Image
+                    name: src
+                    widget: image
+                  - label: Image description (leave blank for decorative images)
+                    name: alt
+                    widget: string
+                    required: false
+                    default: ""
+              - label: Perks
+                name: perks
+                widget: list
+                min: 3
+                max: 3
+                collapsed: true
+                fields:
+                  - label: Icon
+                    name: icon
+                    widget: select
+                    options:
+                      - comfort
+                      - package
+                      - waves
+                      - leaf
+                      - drop
+                      - flower
+                      - bag
+                      - truck
+                      - sun
+                      - cloud
+                      - bolt
+                  - label: Text
+                    name: text
+                    widget: text

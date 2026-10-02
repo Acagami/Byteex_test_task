@@ -1,10 +1,26 @@
 {
-  "name": "Byteex_Test",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "private": true
+    "name":  "byteex-product-page",
+    "version":  "1.0.0",
+    "description":  "Responsive product landing page with a file-based Decap CMS",
+    "scripts":  {
+                    "postinstall":  "node scripts/setup.mjs",
+                    "dev":  "node scripts/dev.mjs",
+                    "dev:web":  "npm --prefix apps/web run dev",
+                    "cms":  "node scripts/cms.mjs",
+                    "build":  "npm run test \u0026\u0026 npm --prefix apps/web run build",
+                    "preview":  "npm --prefix apps/web run preview",
+                    "lint":  "npm --prefix apps/web run lint",
+                    "test":  "node --test tests/*.test.mjs",
+                    "test:e2e":  "playwright test"
+                },
+    "private":  true,
+    "devDependencies":  {
+                            "@playwright/test":  "1.63.0",
+                            "decap-cms":  "3.16.3",
+                            "decap-server":  "3.11.3",
+                            "yaml":  "2.9.1"
+                        },
+    "engines":  {
+                    "node":  "\u003e=22.18.0"
+                }
 }

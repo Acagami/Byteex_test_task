@@ -7,3 +7,12 @@ build/
 .idea/
 .DS_Store
 Thumbs.db
+
+# Generated from the pinned CMS package during npm ci
+apps/web/public/admin/decap-cms.js
+
+# Local leftovers from the replaced CMS and browser test output
+.strapi/
+.strapi-updater.json
+test-results/
+playwright-report/

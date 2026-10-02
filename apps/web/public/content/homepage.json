@@ -1,0 +1,396 @@
+{
+  "brandName": "BYTEEX",
+  "announcement": [
+    "Consciously made butter-soft staples for every day (or night)",
+    "Free shipping on orders over $200",
+    "Easy 45 day return window"
+  ],
+  "ratingLabel": "Over 500 5-Star Reviews Online",
+  "hero": {
+    "title": "Don't apologize for being comfortable.",
+    "promises": [
+      {
+        "icon": "comfort",
+        "text": "Beautiful, comfortable loungewear for day or night."
+      },
+      {
+        "icon": "package",
+        "text": "No wasteful extras, like tags or plastic packaging."
+      },
+      {
+        "icon": "waves",
+        "text": "Our signature fabric is incredibly comfortable - unlike anything you have ever felt."
+      }
+    ],
+    "cta": {
+      "label": "Customize Your Outfit",
+      "href": "#story"
+    },
+    "review": {
+      "name": "Amy P.",
+      "quote": "Honestly, my loungewear set is my new favorite. Quality, comfort and buttery-soft fabric — I want to live in it.",
+      "rating": 5,
+      "avatar": {
+        "src": "/media/image-32.jpg",
+        "alt": ""
+      },
+      "source": "One of 500+ 5 Star Reviews Online"
+    },
+    "gallery": [
+      {
+        "src": "/media/image-1.jpg",
+        "alt": "Oatmeal loungewear set"
+      },
+      {
+        "src": "/media/image-28.jpg",
+        "alt": "White cotton loungewear set"
+      },
+      {
+        "src": "/media/image-26.jpg",
+        "alt": "Relaxed white loungewear"
+      }
+    ]
+  },
+  "press": {
+    "title": "As seen in",
+    "logos": [
+      {
+        "src": "/media/image-36.png",
+        "alt": "Eco-Stylist"
+      },
+      {
+        "src": "/media/image-35.png",
+        "alt": "Canadian Living"
+      },
+      {
+        "src": "/media/image-33.png",
+        "alt": "Jillian Harris"
+      },
+      {
+        "src": "/media/image-37.png",
+        "alt": "The Eco Hub"
+      },
+      {
+        "src": "/media/image-34.png",
+        "alt": "Trendhunter"
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Loungewear you can be proud of.",
+    "items": [
+      {
+        "icon": "leaf",
+        "title": "Ethically sourced.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis sapien facilisis tincidunt pellentesque."
+      },
+      {
+        "icon": "drop",
+        "title": "Responsibly made.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis sapien facilisis tincidunt pellentesque."
+      },
+      {
+        "icon": "flower",
+        "title": "Made for living in.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis sapien facilisis tincidunt pellentesque."
+      },
+      {
+        "icon": "waves",
+        "title": "Unimaginably comfortable.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis sapien facilisis tincidunt pellentesque."
+      }
+    ],
+    "gallery": [
+      {
+        "src": "/media/image-28.jpg",
+        "alt": "White cotton loungewear set",
+        "title": "White Robe"
+      },
+      {
+        "src": "/media/image-1.jpg",
+        "alt": "Oatmeal lounge top and shorts",
+        "title": "Oat Set"
+      },
+      {
+        "src": "/media/image-2.jpg",
+        "alt": "Sage cotton loungewear set",
+        "title": "Sage Set"
+      },
+      {
+        "src": "/media/image-26.jpg",
+        "alt": "Model reading in white loungewear",
+        "title": "Relaxed Set"
+      }
+    ]
+  },
+  "story": {
+    "title": "Be your best self.",
+    "paragraphs": [
+      "Hi! I'm [Name], and I founded BYTEEX with one simple idea: getting dressed should feel as good as winding down.",
+      "We create thoughtful, comfortable essentials with soft fabrics and considered details, so the pieces you reach for every day are made with care.",
+      "From our fabric choices to the way each piece is finished, comfort and responsibility guide every decision we make.",
+      "We hope you find a new favorite here."
+    ],
+    "gallery": [
+      {
+        "src": "/media/image-28.jpg",
+        "alt": "Model wearing a white loungewear set"
+      },
+      {
+        "src": "/media/image-1.jpg",
+        "alt": "Oatmeal loungewear collection"
+      },
+      {
+        "src": "/media/image-31.jpg",
+        "alt": "Soft cotton loungewear in a sunlit room"
+      }
+    ],
+    "cta": {
+      "label": "Customize Your Outfit",
+      "href": "#benefits"
+    }
+  },
+  "comfort": {
+    "title": "Comfort made easy",
+    "cards": [
+      {
+        "icon": "bag",
+        "title": "You save.",
+        "description": "Browse our comfort sets and save 15% when you bundle."
+      },
+      {
+        "icon": "truck",
+        "title": "We ship.",
+        "description": "We ship your items within 1–2 days of receiving your order."
+      },
+      {
+        "icon": "sun",
+        "title": "You enjoy!",
+        "description": "Wear heavenly comfort around the house, out on the town, or in bed."
+      }
+    ],
+    "cta": {
+      "label": "Customize Your Outfit",
+      "href": "#benefits"
+    }
+  },
+  "testimonials": {
+    "title": "What are our fans saying?",
+    "description": "Everyday comfort, worn your way. A little inspiration from the moments that make you feel most like yourself.",
+    "gallery": [
+      {
+        "src": "/media/image-3.jpg",
+        "alt": ""
+      },
+      {
+        "src": "/media/image-5.jpg",
+        "alt": ""
+      },
+      {
+        "src": "/media/image-7.jpg",
+        "alt": ""
+      },
+      {
+        "src": "/media/image-9.jpg",
+        "alt": ""
+      },
+      {
+        "src": "/media/image-11.jpg",
+        "alt": ""
+      },
+      {
+        "src": "/media/image-13.jpg",
+        "alt": ""
+      },
+      {
+        "src": "/media/image-0.jpg",
+        "alt": ""
+      },
+      {
+        "src": "/media/image-16.jpg",
+        "alt": ""
+      },
+      {
+        "src": "/media/image-18.jpg",
+        "alt": ""
+      },
+      {
+        "src": "/media/image-20.jpg",
+        "alt": ""
+      },
+      {
+        "src": "/media/image-22.jpg",
+        "alt": ""
+      },
+      {
+        "src": "/media/image-4.jpg",
+        "alt": ""
+      },
+      {
+        "src": "/media/image-6.jpg",
+        "alt": ""
+      },
+      {
+        "src": "/media/image-8.jpg",
+        "alt": ""
+      },
+      {
+        "src": "/media/image-10.jpg",
+        "alt": ""
+      },
+      {
+        "src": "/media/image-12.jpg",
+        "alt": ""
+      },
+      {
+        "src": "/media/image-14.jpg",
+        "alt": ""
+      },
+      {
+        "src": "/media/image-15.jpg",
+        "alt": ""
+      },
+      {
+        "src": "/media/image-17.jpg",
+        "alt": ""
+      },
+      {
+        "src": "/media/image-19.jpg",
+        "alt": ""
+      },
+      {
+        "src": "/media/image-21.jpg",
+        "alt": ""
+      },
+      {
+        "src": "/media/image-23.jpg",
+        "alt": ""
+      }
+    ],
+    "reviews": [
+      {
+        "name": "Amy P.",
+        "quote": "Honestly, my loungewear set is my new favorite. Quality, comfort and buttery-soft fabric — I want to live in it.",
+        "rating": 5
+      },
+      {
+        "name": "Jamie S.",
+        "quote": "The fabric feels incredible, and the set is comfortable enough to wear all day. I am already planning my next order.",
+        "rating": 5
+      },
+      {
+        "name": "Nina R.",
+        "quote": "Beautifully made and so soft. It has quickly become the first thing I reach for when I get home.",
+        "rating": 5
+      }
+    ],
+    "cta": {
+      "label": "Customize Your Outfit",
+      "href": "#benefits"
+    }
+  },
+  "faq": {
+    "title": "Frequently asked questions.",
+    "items": [
+      {
+        "question": "What makes your loungewear so comfortable?",
+        "answer": "Our signature fabric feels soft against your skin, with relaxed shapes designed for everyday comfort — whether you are spending the day at home or winding down for the night."
+      },
+      {
+        "question": "How do I choose my outfit?",
+        "answer": "Explore the collection gallery to find your favorite color and style. Use the arrows or select a thumbnail to take a closer look at each outfit."
+      },
+      {
+        "question": "Where can I see the available styles?",
+        "answer": "The collection gallery above features our White Robe, Oat Set, Sage Set and Relaxed Set."
+      },
+      {
+        "question": "Is the packaging kept simple?",
+        "answer": "We skip wasteful extras like tags and plastic packaging, keeping the focus on the pieces you will wear."
+      },
+      {
+        "question": "Is free shipping available?",
+        "answer": "Free shipping is available on orders over $200."
+      },
+      {
+        "question": "What is the return window?",
+        "answer": "There is a 45 day return window, giving you time to find your comfortable fit."
+      }
+    ],
+    "gallery": [
+      {
+        "src": "/media/image-2.jpg",
+        "alt": "Sage lounge outfit"
+      },
+      {
+        "src": "/media/image-1.jpg",
+        "alt": "Soft oatmeal lounge set"
+      },
+      {
+        "src": "/media/image-26.jpg",
+        "alt": "Relaxing in white loungewear"
+      }
+    ]
+  },
+  "impact": {
+    "title": "Our total green impact",
+    "metrics": [
+      {
+        "icon": "cloud",
+        "value": "3,927 kg",
+        "label": "of CO2 saved"
+      },
+      {
+        "icon": "drop",
+        "value": "2,546,167 days",
+        "label": "of drinking water saved"
+      },
+      {
+        "icon": "bolt",
+        "value": "7,321 kWh",
+        "label": "of energy saved"
+      }
+    ]
+  },
+  "closing": {
+    "title": "Find something you love.",
+    "description": "Soft essentials for slow mornings, cozy evenings, and everything in between. Make yourself comfortable.",
+    "gallery": [
+      {
+        "src": "/media/image-2.jpg",
+        "alt": "Sage loungewear"
+      },
+      {
+        "src": "/media/image-0.jpg",
+        "alt": "Patterned yellow lounge shirt"
+      },
+      {
+        "src": "/media/image-1.jpg",
+        "alt": "Oatmeal loungewear"
+      }
+    ],
+    "cta": {
+      "label": "Customize Your Outfit",
+      "href": "#benefits"
+    },
+    "shippingNote": "Ships in 1–2 days",
+    "paymentMethods": {
+      "src": "/media/image-38.png",
+      "alt": "Accepted payment methods"
+    },
+    "perks": [
+      {
+        "icon": "truck",
+        "text": "FREE Shipping on\nOrders over $200"
+      },
+      {
+        "icon": "sun",
+        "text": "Over 500 5 Star\nReviews Online"
+      },
+      {
+        "icon": "bag",
+        "text": "Made ethically\nand responsibly."
+      }
+    ]
+  }
+}
