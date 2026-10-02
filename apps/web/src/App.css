@@ -157,3 +157,15 @@
 
 /* Draw a crisp white separator at each overlapping photo edge. */
 .story-photo { border: 0; outline: 3px solid #fff; outline-offset: -3px; }
+
+/* White separators only on the actual overlap seams in the story collage. */
+.story-photo { border: 0; outline: none; outline-offset: 0; }
+.story-seam { position: absolute; z-index: 4; display: block; background: #fff; pointer-events: none; }
+.story-seam-top-right { left: 29%; top: 3%; width: 3px; height: 27%; }
+.story-seam-top-bottom { left: 16%; top: 30%; width: 13%; height: 3px; }
+.story-seam-bottom-left { left: 72%; top: 70%; width: 3px; height: 27%; }
+.story-seam-bottom-top { left: 72%; top: 70%; width: 6%; height: 3px; }
+@media (max-width: 700px) {
+  .story-seam-top-bottom { left: 17%; width: 12%; }
+  .story-seam-bottom-top { width: 8%; }
+}
