@@ -142,3 +142,6 @@
   .hero-collage { width: 100%; height: min(76vw, 330px); min-height: 0; }
   .hero-collage::before { inset: 24% -4% 25%; content: ''; background: linear-gradient(90deg, #fff 0%, #f6ece2 18%, #f6ece2 82%, #fff 100%); }
 }
+
+/* Thin white seam around the hero triptych panels. */
+.hero-photo { border: 2px solid #fff; }
