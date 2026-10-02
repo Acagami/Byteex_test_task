@@ -145,3 +145,9 @@
 
 /* Thin white seam around the hero triptych panels. */
 .hero-photo { border: 2px solid #fff; }
+
+.gallery-thumbnail { flex: 0 0 clamp(32px, 5vw, 44px); width: clamp(32px, 5vw, 44px); height: auto; aspect-ratio: 1; }
+.gallery-thumbnail img { aspect-ratio: 1; }
+@media (max-width: 700px) {
+  .gallery-thumbnail { flex-basis: clamp(28px, 8vw, 38px); width: clamp(28px, 8vw, 38px); height: auto; aspect-ratio: 1; }
+}
