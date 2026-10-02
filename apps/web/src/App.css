@@ -27,3 +27,25 @@
   .story-copy p { font-size: 11px; }
   .story-copy .button { margin: 15px auto 0; }
 }
+
+/* Refined details: framed photography, line icons, and a review carousel. */
+.hero-photo, .story-photo { border: 4px solid #fff; }
+.promise-icon, .benefit-icon { flex: 0 0 22px; width: 22px; height: 22px; }
+.line-icon { display: block; width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 1.65; stroke-linecap: round; stroke-linejoin: round; }
+.benefit-icon .line-icon { width: 15px; height: 15px; }
+.button { position: relative; align-items: center; justify-content: center; line-height: 1.2; }
+.button > span:first-child { flex: 1; text-align: center; }
+.button .button-arrow { position: absolute; top: 50%; right: 17px; display: grid; width: 18px; height: 22px; place-items: center; transform: translateY(-50%); font-size: 18px; line-height: 1; }
+.review-note { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+.review-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; }
+.review-meta strong { color: #403b83; font-size: 10px; }
+.review-meta > span:last-child { color: #88838c; font-size: 9px; }
+.review-controls { display: flex; justify-content: flex-end; align-items: center; gap: 7px; margin-top: 2px; }
+.review-count { margin-right: auto; color: #928c95; font-size: 9px; }
+.review-controls button { display: grid; width: 26px; height: 26px; padding: 0; place-items: center; border: 1px solid #e9e4df; border-radius: 50%; background: #fff; color: #28236f; cursor: pointer; line-height: 1; }
+.review-controls button:hover { border-color: #6555a0; background: #f8f5fb; }
+@media (max-width: 700px) {
+  .promise-icon, .benefit-icon { flex-basis: 20px; width: 20px; height: 20px; }
+  .button .button-arrow { right: 14px; }
+  .review-note { grid-template-columns: minmax(0, 1fr); }
+}
