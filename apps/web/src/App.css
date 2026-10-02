@@ -171,3 +171,33 @@
 }
 
 .story-seam { background: #f3eff3; }
+
+/* Desktop proportions tuned against the Figma first fold. */
+@media (min-width: 1025px) {
+  #root { width: 100%; max-width: none; }
+  .announcement { width: 100%; min-height: 34px; padding-top: 8px; padding-bottom: 8px; }
+  .site-header { width: min(calc(100% - 64px), 1680px); height: 104px; }
+  .wordmark { font-size: 44px; line-height: 1; }
+  .wordmark sup { font-size: 11px; }
+  .hero {
+    width: min(calc(100% - 64px), 1680px);
+    grid-template-columns: minmax(520px, .78fr) minmax(0, 1.22fr);
+    gap: clamp(40px, 4vw, 64px);
+    align-items: start;
+    padding-top: 30px;
+  }
+  .hero-copy { max-width: 600px; }
+  .hero h1 { max-width: 560px; font-size: clamp(36px, 2.7vw, 42px); line-height: 1.08; }
+  .promise-list li { grid-template-columns: 30px 1fr; gap: 14px; font-size: 14px; line-height: 1.5; }
+  .promise-icon { width: 30px; height: 30px; }
+  .promise-icon svg { width: 17px; height: 17px; }
+  .hero .button, .hero .cta-button { width: min(100%, 360px); min-height: 56px; font-size: 16px; }
+  .review-note, .hero-review { width: min(100%, 520px); }
+  .hero-collage { height: 420px; }
+  .hero-collage::before { inset: 22% -10% 27%; }
+  .hero-photo-one, .hero-photo-three { width: 21.5%; }
+  .hero-photo-one { left: 12.5%; }
+  .hero-photo-two { left: 33.5%; width: 34%; }
+  .hero-photo-three { right: 12.3%; }
+  .benefits { width: min(calc(100% - 96px), 1280px); }
+}
