@@ -154,3 +154,6 @@
 
 /* Make each overlapping story-collage photo edge clearly visible. */
 .story-photo { border: 6px solid #fff; }
+
+/* Draw a crisp white separator at each overlapping photo edge. */
+.story-photo { border: 0; outline: 3px solid #fff; outline-offset: -3px; }
