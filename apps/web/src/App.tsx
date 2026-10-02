@@ -1,9 +1,17 @@
-﻿import { useState } from 'react'
-import whiteLoungewear from './assets/loungewear-white.png'
-import sageLoungewear from './assets/loungewear-sage.png'
-import oatLoungewear from './assets/loungewear-oat.png'
-import readingLoungewear from './assets/loungewear-reading.png'
+import { useState } from 'react'
+import whiteLoungewear from './assets/reference/image-28.jpg'
+import sageLoungewear from './assets/reference/image-2.jpg'
+import oatLoungewear from './assets/reference/image-1.jpg'
+import readingLoungewear from './assets/reference/image-26.jpg'
+import storyDetail from './assets/reference/image-31.jpg'
+import reviewAvatar from './assets/reference/image-32.jpg'
+import jillianLogo from './assets/reference/image-33.png'
+import trendhunterLogo from './assets/reference/image-34.png'
+import canadianLogo from './assets/reference/image-35.png'
+import ecoStylistLogo from './assets/reference/image-36.png'
+import ecoHubLogo from './assets/reference/image-37.png'
 import './App.css'
+import HomeSections from './HomeSections'
 
 type IconName = 'comfort' | 'package' | 'waves' | 'leaf' | 'drop' | 'flower'
 
@@ -72,7 +80,7 @@ function App() {
             <a className="button" href="#story"><span>Customize Your Outfit</span><span className="button-arrow" aria-hidden="true">&rarr;</span></a>
             <article className="review-note" aria-label="Customer review">
               <div className="review-content">
-                <div className="review-meta"><strong>{reviews[0].name}</strong><span className="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span>{reviews[0].source}</span></div>
+                <div className="review-meta"><img className="review-avatar" src={reviewAvatar} alt="" /><strong>{reviews[0].name}</strong><span className="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span>One of 500+ 5 Star Reviews Online</span></div>
                 <p>&ldquo;{reviews[0].quote}&rdquo;</p>
               </div>
             </article>
@@ -85,7 +93,7 @@ function App() {
         </section>
         <section className="press-strip" aria-label="As seen in">
           <p>As seen in</p>
-          <div><span>ECO-STYLIST</span><span>Canadian Living</span><span>JILLIAN HARRIS</span><span>THE ECO HUB</span><span>TRENDHUNTER</span></div>
+          <div><img src={ecoStylistLogo} alt="Eco-Stylist" /><img src={canadianLogo} alt="Canadian Living" /><img src={jillianLogo} alt="Jillian Harris" /><img src={ecoHubLogo} alt="The Eco Hub" /><img src={trendhunterLogo} alt="Trendhunter" /></div>
         </section>
         <section className="benefits" id="benefits" aria-labelledby="benefits-title">
           <div className="benefit-copy">
@@ -117,7 +125,7 @@ function App() {
           <div className="story-collage" aria-label="Loungewear collection photography">
             <img className="story-photo story-photo-main" src={whiteLoungewear} alt="Model wearing a white loungewear set" />
             <img className="story-photo story-photo-top" src={oatLoungewear} alt="Oatmeal loungewear collection" />
-            <img className="story-photo story-photo-bottom" src={sageLoungewear} alt="Soft cotton loungewear in a sunlit room" />
+            <img className="story-photo story-photo-bottom" src={storyDetail} alt="Soft cotton loungewear in a sunlit room" />
             <span className="story-seam story-seam-top-right" aria-hidden="true" />
             <span className="story-seam story-seam-top-bottom" aria-hidden="true" />
             <span className="story-seam story-seam-bottom-left" aria-hidden="true" />
@@ -132,6 +140,7 @@ function App() {
             <a className="button" href="#benefits"><span>Customize Your Outfit</span><span className="button-arrow" aria-hidden="true">&rarr;</span></a>
           </div>
         </section>
+        <HomeSections />
       </main>
     </>
   )
